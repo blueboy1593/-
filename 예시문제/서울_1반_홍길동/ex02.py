@@ -5,6 +5,23 @@ def calc(equation):
     equation은 덧셈 뺄셈으로 이루어진 수식 문자열입니다.
     계산된 결과를 정수로 반환합니다.
     """
+    equ_list = list(equation)
+    result = 0
+    adding = True
+    jaritsu = 0
+    for i in range(equ_list):
+        if char == equ_list[0]:
+            print(char)
+        
+        
+        # char == '+':
+        #     print(char)
+        # elif char == '-':
+        #     print(char)
+        # else:
+        #     pass
+    return equ_list
+            
 
 
 

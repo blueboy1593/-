@@ -1,13 +1,9 @@
 # 파일명을 변경하지 마시오.
 # 아래에 클래스 Point와 Circle을 선언하시오.
 
-
-
-
-
-
-
-
+class Point(self, x, y):
+    def get_center(x, y):
+        return x, y
 
 
 

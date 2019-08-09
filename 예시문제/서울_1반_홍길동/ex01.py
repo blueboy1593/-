@@ -5,11 +5,11 @@ def positive_sum(numbers):
     numbers는 숫자들이 담긴 리스트입니다.
     numbers에 담긴 숫자들 중, 양의 정수들의 합을 반환합니다.
     """
-
-
-
-
-
+    pos_sum = 0
+    for number in numbers:
+        if number > 0 and type(number) == int:
+            pos_sum += number
+    return pos_sum
 
 
 # 실행 결과를 확인하기 위한 코드입니다. 수정하지 마시오.
