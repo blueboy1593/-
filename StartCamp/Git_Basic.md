@@ -70,7 +70,14 @@
    origin  https://github.com/blueboy1593/TIL.git (push)
    ```
 
-2. 원격 저장소에 올리기
+2. remote 삭제해버리기
+
+   ```bash
+   $ git remote remove origin
+   이 코드를 사용하면 깃 리모트를 삭제하고 새로 할 수 있다.
+   ```
+
+3. 원격 저장소에 올리기
 
    ```
    $ git push origin master
@@ -82,13 +89,13 @@
 
    master는 브랜치의 이름
 
-3. 원격 저장소에서 가져오기
+4. 원격 저장소에서 가져오기
 
    ```
    $ git pull origin master
    ```
 
-4. 원격 저장소를 로컬에 복사하기
+5. 원격 저장소를 로컬에 복사하기
 
    ```
    $ git clone __경로__
