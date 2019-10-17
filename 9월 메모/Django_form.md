@@ -62,14 +62,3 @@ class ArticleForm(forms.Form):
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-

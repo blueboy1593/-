@@ -118,107 +118,24 @@ python manage.py loaddata articles.yaml
 ctrl + shift + p 로 format document 누르면 개이득이다!!
 ```
 
+## 1017 부터의 복습
 
+### 과제 코멘트 만들기
 
-
-
-``` bash
-In [1]: 1+1
-Out[1]: 2
-​
-In [2]: form
-Out[2]: <ArticleForm bound=True, valid=Unknown, fields=(title;content)>
-​
-In [3]: dir(form)
-Out[3]:
-['Meta',
- '__class__',
- '__delattr__',
- '__dict__',
- '__dir__',
- '__doc__',
- '__eq__',
- '__format__',
- '__ge__',
- '__getattribute__',
- '__getitem__',
- '__gt__',
- '__hash__',
- '__html__',
- '__init__',
- '__init_subclass__',
- '__iter__',
- '__le__',
- '__lt__',
- '__module__',
- '__ne__',
- '__new__',
- '__reduce__',
- '__reduce_ex__',
- '__repr__',
- '__setattr__',
- '__sizeof__',
- '__str__',
- '__subclasshook__',
- '__weakref__',
- '_bound_fields_cache',
- '_clean_fields',
- '_clean_form',
- '_errors',
- '_get_validation_exclusions',
- '_html_output',
- '_meta',
- '_post_clean',
- '_save_m2m',
- '_update_errors',
- '_validate_unique',
- 'add_error',
- 'add_initial_prefix',
- 'add_prefix',
- 'as_p',
- 'as_table',
- 'as_ul',
- 'auto_id',
- 'base_fields',
- 'changed_data',
- 'clean',
- 'data',
- 'declared_fields',
- 'default_renderer',
- 'empty_permitted',
- 'error_class',
- 'errors',
- 'field_order',
- 'fields',
- 'files',
- 'full_clean',
- 'get_initial_for_field',
- 'has_changed',
- 'has_error',
- 'hidden_fields',
- 'initial',
- 'instance',
- 'is_bound',
- 'is_multipart',
- 'is_valid',
- 'label_suffix',
- 'media',
- 'non_field_errors',
- 'order_fields',
- 'prefix',
- 'renderer',
- 'save',
- 'use_required_attribute',
- 'validate_unique',
- 'visible_fields']
-​
-In [4]: form.as_p
-Out[4]: <bound method BaseForm.as_p of <ArticleForm bound=True, valid=Unknown, fields=(title;content)>>
-​
-In [5]: form.as_p()
-Out[5]: '<p><label for="id_title">Title:</label> <input type="text" name="title" value="4번째 게시글" maxlength="20" required id="id_title"></p>\n<p><label for="id_content">Content:</label> <textarea name="content" cols="40" rows="10" required id="id_content">\n배고파</textarea></p>'
-​
-In [6]: form.is_valid()
-Out[6]: True
 ```
+# Comment 기능 구현
+
+- Comment 모델을 만들어야 합니다.
+  - content : 문자열
+  - created_at : 시간
+  - article : 참조키
+- Comment 의 Create, Read, Delete 가 가능해야 합니다.
+  - Comment 생성/삭제 동작의 경우 모두 POST 요청으로 동작합니다.
+  - Comment 읽기(목록) 및 생성/삭제 동작은 Article 의 읽기(상세보기)에 있습니다.
+  - Comment 생성 동작은 모두(View, Template 에서) ModelForm 으로 구현해야 합니다.
+```
+
+
+
+
 
