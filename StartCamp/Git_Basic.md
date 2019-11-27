@@ -47,6 +47,14 @@
    ```
    $ git log
    ```
+   
+6. git remove
+
+   ```bash
+   $ git remote remove origin
+   ```
+
+   
 
 ## 원격 저장소 활용하기
 
@@ -104,7 +112,55 @@
    다운받기를 원하는 폴더에서 git bash를 열고 위의 명령어를 입력한다.
 
    경로는 github에서 우측에 있는 초록색 버튼을 누르면 나타난다.
+   
+6. Git Bash 에 등록되어 있는 정보 확인하기
 
+   ```bash
+   $ git config --global user.name
+   $ git config --global user.email
+   ```
 
+7. Git 협업하기 명령어
+
+   Master 주소에서 Fork 따오기
+
+   Pull request 하기
+
+   ```bash
+   git remote add upstream (주인의 주소)
+   git push upstream master
+   git pull upstream master
+   ```
+
+   
 
 ref: https://backlog.com/git-tutorial/kr/
+
+
+
+# Branch 연습
+
+```bash
+$ git checkout -b eb-deploy
+로 가지 새로 만들어서 들어옴.
+
+$ git checkout f6b1a8b930643d263e1e00fecf7d5edfa9a5cb47
+이건 뭘까? 이전에 작업했던 내용....?
+
+$ git branch
+  eb-deploy
+  master
+* tmp
+어떤 브랜치가 있는지 확인
+
+$ git branch -D master
+$ git checkout -b master
+이걸로 현재 새로 브랜치를 만든다.!!
+
+$ git push origin +master
+이 명령어는 추가 push인 듯.
+
+```
+
+
+
