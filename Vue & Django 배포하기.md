@@ -283,13 +283,97 @@
     
     ```
 
-    
 
-35. Google 에 Heroku 검색해서 가입만 해놓기.
+## 여기서 부터는 heroku!
 
-36. ```
-    Heroku ID
-    snb0303@naver.com
+1. Google 에 Heroku 검색해서 가입만 해놓기.
+
+2. ```
+   Heroku ID
+   snb0303@naver.com
+   ```
+
+3. ```
+   $ git checkout -b heroku
+   ```
+
+4. ```bash
+   아예 쟝고 폴더로 만들어버리기
+   $ pip install django-heroku
+   환경을 설정해주는 라이브러리
+   설치만 해주면 끝!!!
+   ```
+
+5. ```bash
+   $ vi Procfile
+   web: gunicorn JunesMovie.wsgi --log-file -
+   이렇게 내용 기입해준다.
+   ```
+
+6. ```bash
+   $ pip install gunicorn
+   ```
+
+7. ```bash
+   $ pip freeze > requirements.txt
+   pypiwin32
+   pywin32 는 지워버려야한다!
+   ```
+
+8. runtime.txt 만들어서
+
+   ```txt
+   python-3.7.4
+   ```
+
+   입력!
+
+9. $ pip install python-decouple 도 깔아줘야함
+
+10. ```python
+    from decouple import config
+    SECRET_KEY = config('SCRETE_KEY')
+    DEBUG = config('DEBUG')
+    ALLOWED_HOSTS = ['*']
+    STATIC_ROOT = 'static'
     ```
 
-37. 
+11. heroku.com 으로 들어가서 heroku cli 검색. 그리고 64bit짜리 설치. 설치하구 bash 들어가서
+
+    ```bash
+    $ heroku
+    치면 아래에 정보들 쭉 나옴.
+    ```
+
+12. ```bash
+    $ heroku login
+    heroku: Press any key to open up the browser to login or q to exit:
+    Opening browser to https://cli-auth.heroku.com/auth/browser/06168d45-69f6-42c5-92ae-eef147a8d983
+    Logging in... done
+    Logged in as snb0303@naver.com
+    ```
+
+13. ```bash
+    $ heroku create mooving-api-django-server
+    Creating ⬢ mooving-api-django-server... done
+    https://mooving-api-django-server.herokuapp.com/ | https://git.heroku.com/mooving-api-django-server.git
+    ```
+
+14. $ git remote -v 이거 하면 헤로쿠 등록된게 보인다.
+
+15. 헤로쿠에 환경변수 세팅
+
+    ```bash
+    $ heroku config:set SCRETE_KEY='$bm*_f=$#auyrr=j3(a_@j7r5mp7(pp3%k(v4!%$%ke+sf--@)'
+    
+    ```
+
+    이 방법말고 사이트에 가서 직접 해주자.!!!
+
+    해주고 나서 git add 랑 git commit 까지 해주고
+
+16. ```bash
+    $ git push heroku heroku:master
+    ```
+
+17. 
