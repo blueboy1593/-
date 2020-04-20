@@ -25,3 +25,4 @@ pip freeze > requirements.txt
 내가 이거 하려고 어떤 라이브러리 설치했는지 알려주는 것이다.
 ```
 
+메모 수정!!!
