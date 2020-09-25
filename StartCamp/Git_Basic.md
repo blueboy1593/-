@@ -54,7 +54,13 @@
    $ git remote remove origin
    ```
 
-   
+7. git init 자체를 삭제하기
+
+   ```bash
+   rm -rf .git
+   ```
+
+
 
 ## 원격 저장소 활용하기
 
