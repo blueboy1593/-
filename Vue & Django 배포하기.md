@@ -30,7 +30,7 @@
 
 11. ? What do you want to use as your public directory? dist
 
-12. ? Configure as a single-page app (rewrite all urls to /index.html)? (y/N)
+12. ? Configure as a single-page app (rewrite all urls to /index.html)? (y/N) y
 
     여기서 해주는 것은 일단 index 페이지로 보내고
 
@@ -332,7 +332,7 @@
 
 10. ```python
     from decouple import config
-    SECRET_KEY = config('SCRETE_KEY')
+    SECRET_KEY = config('SECRET_KEY')
     DEBUG = config('DEBUG')
     ALLOWED_HOSTS = ['*']
     STATIC_ROOT = 'static'
@@ -377,3 +377,135 @@
     ```
 
 17. 
+
+
+
+```bash
+$ git push heroku heroku:master
+Enumerating objects: 63, done.
+Counting objects: 100% (63/63), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (59/59), done.
+Writing objects: 100% (63/63), 405.12 KiB | 5.26 MiB/s, done.
+Total 63 (delta 16), reused 0 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> Python app detected
+remote:  !     Python has released a security update! Please consider upgrading to python-3.7.6
+remote:        Learn More: https://devcenter.heroku.com/articles/python-runtimes
+remote: -----> Installing python-3.7.4
+remote: -----> Installing pip
+remote: -----> Installing SQLite3
+remote: Sqlite3 successfully installed.
+remote: -----> Installing requirements with pip
+remote:        Collecting asgiref==3.2.3 (from -r /tmp/build_52fe0d19e00192f0a9677e08bbaa4f5c/requirements.txt (line 1))
+remote:          Downloading https://files.pythonhosted.org/packages/a5/cb/5a235b605a9753ebcb2730c75e610fb51c8cab3f01230080a8229fa36adb/asgiref-3.2.3-py2.py3-none-any.whl
+remote:        Collecting dj-database-url==0.5.0 (from -r /tmp/build_52fe0d19e00192f0a9677e08bbaa4f5c/requirements.txt (line 2))
+remote:          Downloading https://files.pythonhosted.org/packages/d4/a6/4b8578c1848690d0c307c7c0596af2077536c9ef2a04d42b00fabaa7e49d/dj_database_url-0.5.0-py2.py3-none-any.whl
+remote:        Collecting Django==3.0.3 (from -r /tmp/build_52fe0d19e00192f0a9677e08bbaa4f5c/requirements.txt (line 3))
+remote:          Downloading https://files.pythonhosted.org/packages/c6/b7/63d23df1e311ca0d90f41352a9efe7389ba353df95deea5676652e615420/Django-3.0.3-py3-none-any.whl (7.5MB)
+remote:        Collecting django-cors-headers==3.2.1 (from -r /tmp/build_52fe0d19e00192f0a9677e08bbaa4f5c/requirements.txt (line 4))
+remote:          Downloading https://files.pythonhosted.org/packages/19/4e/dd037bf42cc33d1d61e45b973507303afad14fc18bd36329ec8ab3673373/django_cors_headers-3.2.1-py3-none-any.whl
+remote:        Collecting django-heroku==0.3.1 (from -r /tmp/build_52fe0d19e00192f0a9677e08bbaa4f5c/requirements.txt (line 5))
+remote:          Downloading https://files.pythonhosted.org/packages/59/af/5475a876c5addd5a3494db47d9f7be93cc14d3a7603542b194572791b6c6/django_heroku-0.3.1-py2.py3-none-any.whl
+remote:        Collecting djangorestframework==3.11.0 (from -r /tmp/build_52fe0d19e00192f0a9677e08bbaa4f5c/requirements.txt (line 6))
+remote:          Downloading https://files.pythonhosted.org/packages/be/5b/9bbde4395a1074d528d6d9e0cc161d3b99bd9d0b2b558ca919ffaa2e0068/djangorestframework-3.11.0-py3-none-any.whl (911kB)
+remote:        Collecting djangorestframework-jwt==1.11.0 (from -r /tmp/build_52fe0d19e00192f0a9677e08bbaa4f5c/requirements.txt (line 7))
+remote:          Downloading https://files.pythonhosted.org/packages/2b/cf/b3932ad3261d6332284152a00c3e3a275a653692d318acc6b2e9cf6a1ce3/djangorestframework_jwt-1.11.0-py2.py3-none-any.whl
+remote:        Collecting gunicorn==20.0.4 (from -r /tmp/build_52fe0d19e00192f0a9677e08bbaa4f5c/requirements.txt (line 8))
+remote:          Downloading https://files.pythonhosted.org/packages/69/ca/926f7cd3a2014b16870086b2d0fdc84a9e49473c68a8dff8b57f7c156f43/gunicorn-20.0.4-py2.py3-none-any.whl (77kB)
+remote:        Collecting haversine==2.2.0 (from -r /tmp/build_52fe0d19e00192f0a9677e08bbaa4f5c/requirements.txt (line 9))
+remote:          Downloading https://files.pythonhosted.org/packages/72/8e/6df8b563dd6b2961a36cd740b34c00b89142f1b97d92092c133379b2973f/haversine-2.2.0-py2.py3-none-any.whl
+remote:        Collecting psycopg2==2.8.4 (from -r /tmp/build_52fe0d19e00192f0a9677e08bbaa4f5c/requirements.txt (line 10))
+remote:          Downloading https://files.pythonhosted.org/packages/84/d7/6a93c99b5ba4d4d22daa3928b983cec66df4536ca50b22ce5dcac65e4e71/psycopg2-2.8.4.tar.gz (377kB)
+remote:        Collecting PyJWT==1.7.1 (from -r /tmp/build_52fe0d19e00192f0a9677e08bbaa4f5c/requirements.txt (line 11))
+remote:          Downloading https://files.pythonhosted.org/packages/87/8b/6a9f14b5f781697e51259d81657e6048fd31a113229cf346880bb7545565/PyJWT-1.7.1-py2.py3-none-any.whl
+remote:        Collecting python-decouple==3.3 (from -r /tmp/build_52fe0d19e00192f0a9677e08bbaa4f5c/requirements.txt (line 12))
+remote:          Downloading https://files.pythonhosted.org/packages/c7/82/dd20cdca396f58be86c6e710a3958f4a34ca98c5dd3989ee978b6cb9f97e/python-decouple-3.3.tar.gz
+remote:        Collecting pytz==2019.3 (from -r /tmp/build_52fe0d19e00192f0a9677e08bbaa4f5c/requirements.txt (line 13))
+remote:          Downloading https://files.pythonhosted.org/packages/e7/f9/f0b53f88060247251bf481fa6ea62cd0d25bf1b11a87888e53ce5b7c8ad2/pytz-2019.3-py2.py3-none-any.whl (509kB)
+remote:        Collecting sqlparse==0.3.0 (from -r /tmp/build_52fe0d19e00192f0a9677e08bbaa4f5c/requirements.txt (line 14))
+remote:          Downloading https://files.pythonhosted.org/packages/ef/53/900f7d2a54557c6a37886585a91336520e5539e3ae2423ff1102daf4f3a7/sqlparse-0.3.0-py2.py3-none-any.whl
+remote:        Collecting whitenoise==5.0.1 (from -r /tmp/build_52fe0d19e00192f0a9677e08bbaa4f5c/requirements.txt (line 15))
+remote:          Downloading https://files.pythonhosted.org/packages/ae/25/0c8f08c9d3c93192cd286594f1e87b17bab496fb9082c2a69e17051b91fd/whitenoise-5.0.1-py2.py3-none-any.whl
+remote:        Installing collected packages: asgiref, dj-database-url, pytz, sqlparse, Django, django-cors-headers, psycopg2, whitenoise, django-heroku, djangorestframework, PyJWT, djangorestframework-jwt, gunicorn, haversine, python-decouple
+remote:          Running setup.py install for psycopg2: started
+remote:            Running setup.py install for psycopg2: finished with status 'done'
+remote:          Running setup.py install for python-decouple: started
+remote:            Running setup.py install for python-decouple: finished with status 'done'
+remote:        Successfully installed Django-3.0.3 PyJWT-1.7.1 asgiref-3.2.3 dj-database-url-0.5.0 django-cors-headers-3.2.1 django-heroku-0.3.1 djangorestframework-3.11.0 djangorestframework-jwt-1.11.0 gunicorn-20.0.4 haversine-2.2.0 psycopg2-2.8.4 python-decouple-3.3 pytz-2019.3 sqlparse-0.3.0 whitenoise-5.0.1
+remote: 
+remote: -----> $ python manage.py collectstatic --noinput
+remote:        163 static files copied to '/tmp/build_52fe0d19e00192f0a9677e08bbaa4f5c/static'.
+remote: 
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote:
+remote: -----> Compressing...
+remote:        Done: 56.8M
+remote: -----> Launching...
+remote:        Released v7
+remote:        https://cafemoa-django.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/cafemoa-django.git
+ * [new branch]      heroku -> master
+(venv) 
+지렸다 뭔가..
+```
+
+```bash
+$ yarn build
+yarn run v1.22.0
+$ react-scripts build
+Creating an optimized production build...
+Compiled successfully.
+
+File sizes after gzip:
+
+  367.54 KB  build\static\js\2.89061373.chunk.js
+  80.6 KB    build\static\css\2.3da2b790.chunk.css
+  5.94 KB    build\static\js\main.323ebc5d.chunk.js
+  2.59 KB    build\static\css\main.d873af95.chunk.css
+  783 B      build\static\js\runtime-main.fb7ee4a6.js
+
+The project was built assuming it is hosted at the server root.
+You can control this with the homepage field in your package.json.
+For example, add this to build it for GitHub Pages:
+
+  "homepage" : "http://myname.github.io/myapp",
+
+The build folder is ready to be deployed.
+You may serve it with a static server:
+
+  yarn global add serve
+  serve -s build
+
+Find out more about deployment here:
+
+  bit.ly/CRA-deploy
+
+Done in 66.99s.
+```
+
+```bash
+$ firebase deploy
+
+=== Deploying to 'cafemoa-bbe6b'...
+
+i  deploying hosting
+i  hosting[cafemoa-bbe6b]: beginning deploy...
+i  hosting[cafemoa-bbe6b]: found 1 files in dist
++  hosting[cafemoa-bbe6b]: file upload complete
+i  hosting[cafemoa-bbe6b]: finalizing version...
++  hosting[cafemoa-bbe6b]: version finalized
+i  hosting[cafemoa-bbe6b]: releasing new version...
++  hosting[cafemoa-bbe6b]: release complete
+
++  Deploy complete!
+
+Project Console: https://console.firebase.google.com/project/cafemoa-bbe6b/overview
+Hosting URL: https://cafemoa-bbe6b.firebaseapp.com
+```
+

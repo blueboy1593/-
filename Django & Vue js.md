@@ -1,6 +1,8 @@
 # Django & Vue js
 
 ```bash
+$ npm install -g
+이거는 기본 nodejs 설치하구 해주는건가?
 $ deactivate
 로 끝내주기
 $ npm i -g @vue/cli
