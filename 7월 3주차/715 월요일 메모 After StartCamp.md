@@ -221,8 +221,3 @@ True는 암시적으로 1을 의미한다.
 cd homeworkshop
 
 touch 는 그냥 생성인가?
-
-
-
-
-

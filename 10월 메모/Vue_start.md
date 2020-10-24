@@ -120,22 +120,3 @@ $ touch webpack.config.js
 # 5.
 $ npm install -D vue-loader vue-template-compiler
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
